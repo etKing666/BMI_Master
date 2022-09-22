@@ -1,1 +1,1 @@
-web: gunicorn app:bmimaster
+web: gunicorn app:BMI_Master
