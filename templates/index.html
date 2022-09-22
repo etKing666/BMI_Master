@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="p-3 mb-2 bg-success text-white centered">Welcome to the BMI Master - your gateway to a healthy life!</div>
+  <div class="outerpad">
+      <div class="paragraphed">
+          <h4>What is BMI?</h4>
+          <p>BMI stands for "Body Mass Index". BMI is a value derived from the mass (weight) and height of a person. BMI is used to broadly categorize a person as underweight, normal weight, overweight, or obese based on tissue mass (muscle, fat, and bone) and height. </p>
+          <p>You can read more about BMI on <a href={{ url_for('about') }}>this page</a>.</p>
+          <h4>How to Calculate?</h4>
+          <p>With the metric system, the formula for BMI is weight in kilograms divided by height in meters squared. With imperial system, the weight in pounds multiplied by 703 and then that number divided by the height in inches multiplied by the height in inches.</p>
+          <p>Sounds too wordy? DO not worry! Here is our <a href={{ url_for('calculate') }}>BMI Calculator</a>.</p>
+          <h4>Why BMI Master?</h4>
+          <p>BMI Master is your go-to place to calculate your BMI and get advices on your diet and lifestyle. By keeping track of your BMI, you can leave a healthier (and hopefully longer) life!</p>
+      </div>
+  </div>
+
+{% endblock content %}

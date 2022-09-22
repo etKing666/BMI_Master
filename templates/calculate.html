@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="p-3 mb-2 bg-success text-white centered">BMI Calculator</div>
+    <div class="outerpad">
+     <form action="/calculate" method="post">
+        <div class="bordered">
+            <label for="details">Please enter your details:</label>
+            <div>
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="height" name="height" placeholder="Height (in meters)" type="number" step="0.01">
+                <div id="heighthelp" class="form-text">Please enter your height (metric) in meters with "." as decimal separator (i.e. 1.81).</div>
+            </div>
+            <div>
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="weight" name="weight" placeholder="Weight (in kgs)" type="number" step="0.01">
+                <div id="heighthelp" class="form-text">Please enter your weight in kilograms with "." as decimal separator (i.e. 73.2).</div>
+            </div>
+            <div>
+                <input type="checkbox" class="form-check-input" id="agecheck">
+                <label class="form-check-label" for="agecheck">I am over 20 years old.</label>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+     </div>
+    </form>
+{% endblock content %}

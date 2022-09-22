@@ -1,0 +1,19 @@
+.centered {
+text-align: center;
+}
+
+.bordered {
+border: 5px solid #000000;
+text-align: center;
+padding: 10px;
+}
+
+.paragraphed {
+border: 5px solid #000000;
+text-align: justify;
+padding: 10px;
+}
+
+.outerpad {
+padding: 30px;
+}
