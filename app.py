@@ -14,6 +14,7 @@ def about():
 def calculate():
     if request.method == 'POST':
         age_control = request.form.get("agecheck")
+        age_control = True
         if not age_control:
             return render_template("ageerror.html")
         else:
