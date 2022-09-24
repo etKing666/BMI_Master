@@ -3,11 +3,31 @@
 {% block content %}
     {% if result < 18.5 %}
     <div class="text-bg-warning p-3 centered">You are underweight!</div>
+    <div class="outerpad">
+        <div class="paragraphed">
+            <h4>Recommendations for you:</h4>
+        </div>
+    </div>
     {% elif result >= 18.5 and result < 24.9 %}
     <div class="text-bg-success p-3 centered">You are within a healthy weight range!</div>
+    <div class="outerpad">
+        <div class="paragraphed">
+            <h4>Recommendations for you:</h4>
+        </div>
+    </div>
     {% elif result >= 24.9 and result < 29.9 %}
     <div class="text-bg-danger p-3 centered">You are overweight!</div>
+    <div class="outerpad">
+        <div class="paragraphed">
+            <h4>Recommendations for you:</h4>
+        </div>
+    </div>
     {% else %}
     <div class="text-bg-danger p-3 centered">You are OBESE!</div>
+    <div class="outerpad">
+        <div class="paragraphed">
+            <h4>Recommendations for you:</h4>
+        </div>
+    </div>
     {% endif %}
 {% endblock content %}

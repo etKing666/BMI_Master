@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -14,10 +14,7 @@ def about():
 def calculate():
     if request.method == 'POST':
         age_control = request.form.get("agecheck")
-        age_control = True
-        if not age_control:
-            return render_template("ageerror.html")
-        else:
+        if age_control:
             try:
                 height = float(request.form.get("height"))
                 weight = float(request.form.get("weight"))
@@ -25,6 +22,8 @@ def calculate():
                 return render_template("calculated.html", result=result)
             except ValueError:
                 return render_template("valueerror.html")
+        else:
+            return render_template("ageerror.html")
     else:
         return render_template("calculate.html")
 
