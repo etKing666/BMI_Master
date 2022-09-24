@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <div class="p-3 mb-2 bg-success text-white centered">About Body Mass Index (BMI)</div>
     <div class="outerpad">
         <div class="paragraphed">
      <ul>
@@ -44,7 +45,7 @@
                     <li>extreme obesity</li>
                     </br>
                 </ul>
-                <p>You can calculate your BMI using our <a href="/about.html">BMI Calculator</a>.</p>
+                <p>You can calculate your BMI using our <a href={{ url_for('calculate') }}>BMI Calculator</a>.</p>
         </div>
     </div>
 {% endblock content %}
